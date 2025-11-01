@@ -105,8 +105,7 @@ final class AccessKeyCrudControllerTest extends AbstractEasyAdminControllerTestC
 
     public function testNewPageAccessible(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         // 访问新建页面
         $crawler = $client->request('GET', '/admin?entityName=AccessKey&action=new');
@@ -118,8 +117,7 @@ final class AccessKeyCrudControllerTest extends AbstractEasyAdminControllerTestC
 
     public function testIndexPage(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         $crawler = $client->request('GET', '/admin?entityName=AccessKey&action=index');
 

@@ -88,8 +88,7 @@ final class AccessKeyStatisticsCrudControllerTest extends AbstractEasyAdminContr
 
     public function testIndexPage(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         $crawler = $client->request('GET', '/admin?entityName=AccessKeyStatistics&action=index');
 
@@ -99,8 +98,7 @@ final class AccessKeyStatisticsCrudControllerTest extends AbstractEasyAdminContr
 
     public function testEditPageAccessible(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         // 访问编辑页面
         $crawler = $client->request('GET', '/admin?entityName=AccessKeyStatistics&action=edit&entityId=1');
@@ -111,8 +109,7 @@ final class AccessKeyStatisticsCrudControllerTest extends AbstractEasyAdminContr
 
     public function testDetailPageAccessible(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         // 访问详情页面
         $crawler = $client->request('GET', '/admin?entityName=AccessKeyStatistics&action=detail&entityId=1');
