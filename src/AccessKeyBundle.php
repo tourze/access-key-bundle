@@ -8,6 +8,7 @@ use Tourze\BundleDependency\BundleDependencyInterface;
 use Tourze\DoctrineSnowflakeBundle\DoctrineSnowflakeBundle;
 use Tourze\DoctrineTimestampBundle\DoctrineTimestampBundle;
 use Tourze\DoctrineTrackBundle\DoctrineTrackBundle;
+use Tourze\EasyAdminMenuBundle\EasyAdminMenuBundle;
 
 class AccessKeyBundle extends Bundle implements BundleDependencyInterface
 {
@@ -18,6 +19,7 @@ class AccessKeyBundle extends Bundle implements BundleDependencyInterface
             DoctrineSnowflakeBundle::class => ['all' => true],
             DoctrineTimestampBundle::class => ['all' => true],
             DoctrineTrackBundle::class => ['all' => true],
+            EasyAdminMenuBundle::class => ['all' => true],
         ];
     }
 }
