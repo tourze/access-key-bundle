@@ -146,8 +146,6 @@ final class AccessKeyStatisticsCrudControllerTest extends AbstractEasyAdminContr
 
     public function testValidationErrors(): void
     {
-        $client = self::createClientWithDatabase();
-
         // 直接通过Symfony验证器测试实体验证规则
         // 这个测试验证必填字段的验证，等同于表单提交空表单时的验证
         $accessKeyStatistics = new AccessKeyStatistics();
