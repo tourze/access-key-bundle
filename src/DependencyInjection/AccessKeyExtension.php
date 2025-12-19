@@ -4,7 +4,7 @@ namespace Tourze\AccessKeyBundle\DependencyInjection;
 
 use Tourze\SymfonyDependencyServiceLoader\AutoExtension;
 
-class AccessKeyExtension extends AutoExtension
+final class AccessKeyExtension extends AutoExtension
 {
     protected function getConfigDir(): string
     {
